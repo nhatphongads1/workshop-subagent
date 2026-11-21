@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký — Workshop Xây Đội Trợ Lý AI SubAgent</title>
+<meta name="description" content="Đăng ký workshop Xây Đội Trợ Lý AI SubAgent của Nhật Phong. Vé VIP 135.000đ, vé nhóm 3 người 199.000đ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">NHẬT PHONG <span>• CÔNG XƯỞNG AI</span></a>
+    <nav class="nav">
+      <a href="index.html#nhan-duoc">Bạn nhận được gì</a>
+      <a href="index.html#dien-gia">Diễn giả</a>
+      <a href="index.html#thanh-qua">Thành quả thật</a>
+      <a href="index.html#faq">Hỏi đáp</a>
+    </nav>
+    <a class="btn btn-primary header-cta" href="index.html">← Trang chủ</a>
+  </div>
+</header>
+
+<section class="reg-hero">
+  <div class="container">
+    <span class="section-kicker">Đăng ký tham gia</span>
+    <h2 class="section-title">Workshop Xây Đội Trợ Lý AI SubAgent</h2>
+    <p class="section-sub" style="margin:0 auto">20:00 — Thứ Bảy, 28/11/2026 • Trực tuyến qua Zoom • Giới hạn 50 thành viên</p>
+    <div class="steps">
+      <span class="step"><b>1</b> Điền thông tin</span>
+      <span class="step"><b>2</b> Chọn vé &amp; chuyển khoản</span>
+      <span class="step"><b>3</b> Gửi bill qua Zalo nhận link Zoom</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container reg-wrap">
+
+    <!-- Chế độ chờ (tự bật khi hết hạn / đủ chỗ) -->
+    <div class="expired-box" id="waitlist-box">
+      <h3>⏰ Cổng đăng ký đã đóng</h3>
+      <p>Khóa này đã đủ 50 thành viên hoặc đã qua ngày khai giảng. Để lại Zalo, tôi báo bạn ngay khi mở khóa sau.</p>
+      <form id="waitlist-form">
+        <div class="form-row" style="justify-content:center">
+          <input class="input" type="text" id="wl-name" placeholder="Họ tên của bạn" required>
+          <input class="input" type="text" id="wl-zalo" placeholder="Số Zalo của bạn" required>
+          <button class="btn btn-primary" type="submit">Vào danh sách chờ →</button>
+        </div>
+      </form>
+      <p class="form-note" id="wl-done" style="display:none;color:#166534;font-weight:700">✓ Đã ghi nhận! Tôi sẽ nhắn Zalo cho bạn khi mở khóa sau.</p>
+    </div>
+
+    <!-- Form đăng ký -->
+    <div id="reg-main">
+      <div class="tabs" role="tablist">
+        <button class="tab active" id="tab-vip" type="button" role="tab" aria-selected="true">
+          <h3>🎟️ Vé VIP</h3>
+          <div class="price">135.000đ <small>/ 1 người</small></div>
+          <p>Chỉ bằng 1 ly cà phê mỗi ngày trong 1 tuần.</p>
+          <ul>
+            <li>Tham gia workshop trực tiếp qua Zoom</li>
+            <li>Bản ghi xem lại trong 7 ngày</li>
+            <li>Tài liệu + checklist thực hành đầy đủ</li>
+            <li>Nhóm Zalo học viên riêng</li>
+          </ul>
+        </button>
+        <button class="tab" id="tab-group" type="button" role="tab" aria-selected="false">
+          <h3>👥 Vé Nhóm — 3 người</h3>
+          <div class="price">199.000đ <small>/ 3 người</small></div>
+          <p>Rủ thêm 2 người cùng học, cùng làm.</p>
+          <ul>
+            <li>Toàn bộ quyền lợi của Vé VIP × 3 người</li>
+            <li>3 tài khoản vào nhóm Zalo học viên</li>
+            <li>Học nhóm, sửa bài cho nhau sau workshop</li>
+          </ul>
+          <span class="save-badge">Tiết kiệm 206.000đ so với mua lẻ 3 vé</span>
+        </button>
+      </div>
+
+      <form class="reg-form" id="reg-form">
+        <label for="f-name">Họ và tên *</label>
+        <input class="input" type="text" id="f-name" placeholder="VD: Nguyễn Văn A" required>
+
+        <label for="f-zalo">Số Zalo *</label>
+        <input class="input" type="tel" id="f-zalo" placeholder="VD: 09xx xxx xxx — dùng để nhận link Zoom" required>
+        <div class="field-hint">Link Zoom và tài liệu được gửi qua Zalo này sau khi xác nhận thanh toán.</div>
+
+        <label for="f-email">Email (không bắt buộc)</label>
+        <input class="input" type="email" id="f-email" placeholder="VD: ban@email.com">
+
+        <label>Loại vé đã chọn</label>
+        <input class="input" type="text" id="f-ticket" value="Vé VIP — 135.000đ" readonly>
+
+        <div style="margin-top:22px">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Xác nhận &amp; lấy mã đơn →</button>
+        </div>
+        <p class="form-note">Bấm xác nhận, hệ thống tạo mã đơn riêng cho bạn. Bạn chuyển khoản theo mã đơn đó để được xác nhận nhanh nhất.</p>
+      </form>
+
+      <!-- Mã đơn + thanh toán (hiện sau khi submit) -->
+      <div class="order-box" id="order-box">
+        <h3>✅ Đăng ký thành công!</h3>
+        <p>Đây là mã đơn của bạn — ghi mã này vào nội dung chuyển khoản:</p>
+        <div class="order-code" id="order-code">SA-000000</div>
+        <div class="order-rows">
+          <div><span>Họ tên</span><b id="order-name">—</b></div>
+          <div><span>Loại vé</span><b id="order-ticket">—</b></div>
+          <div><span>Số tiền</span><b id="order-amount" style="color:var(--accent)">—</b></div>
+          <div><span>Nội dung chuyển khoản</span><b id="order-content">—</b></div>
+        </div>
+
+        <div class="qr-placeholder">
+          <div class="qr-icon">📱</div>
+          <b>Mã QR thanh toán</b><br>
+          Quét mã để chuyển khoản đúng số tiền và nội dung.<br>
+          <span style="font-size:12px">(Mã QR đang được cập nhật — bạn có thể chuyển khoản tay theo thông tin bên dưới.)</span>
+        </div>
+
+        <p style="font-size:15px;margin-bottom:8px"><b>Bước cuối:</b> chụp bill chuyển khoản, gửi qua Zalo kèm tin nhắn dưới đây để nhận link Zoom:</p>
+        <div class="copy-box" id="zalo-message">—</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-copy" type="button" id="btn-copy">📋 Sao chép tin nhắn</button>
+          <a class="btn zalo-btn" href="https://zalo.me/0793576831" target="_blank" rel="noopener">Mở Zalo gửi bill →</a>
+          <a class="btn btn-outline" id="btn-calendar" href="#" target="_blank" rel="noopener">📅 Thêm vào Google Calendar</a>
+        </div>
+        <div class="success-note">
+          <b>Sau khi gửi bill:</b> bạn sẽ nhận link Zoom qua Zalo trước giờ học. Nhớ lưu lại mã đơn <b id="order-code-2">SA-000000</b> để đối chiếu khi cần.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Workshop Xây Đội Trợ Lý AI SubAgent</h4>
+        <p>Trương Nguyễn Nhật Phong<br>Giáo viên Tin học — Trường Tiểu học Gò Công Tây</p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <a href="https://zalo.me/0793576831" target="_blank" rel="noopener">Zalo: 0793576831</a>
+        <a href="https://www.youtube.com/@XomTiHon" target="_blank" rel="noopener">YouTube: Xóm Tí Hon</a>
+        <a href="https://www.facebook.com/profile.php?id=61596151915151" target="_blank" rel="noopener">Facebook: Uyển Nhi Model</a>
+      </div>
+      <div>
+        <h4>Trang</h4>
+        <a href="index.html">Trang chủ</a>
+        <a href="dang-ky.html">Đăng ký</a>
+        <a href="index.html#faq">Hỏi đáp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Nhật Phong • Công xưởng AI</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/dang-ky.js"></script>
+</body>
+</html>
