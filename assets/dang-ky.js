@@ -3,8 +3,8 @@
    Vé + mã đơn + tin nhắn Zalo + Google Calendar
    ============================================================ */
 var TICKETS = {
-  vip:   { label: 'Vé VIP',            amount: 135000, text: 'Vé VIP — 135.000đ' },
-  group: { label: 'Vé Nhóm (3 người)', amount: 199000, text: 'Vé Nhóm — 199.000đ / 3 người' }
+  vip:   { label: 'Vé VIP',            amount: 135000, text: 'Vé VIP — 135.000đ',            qr: 'assets/img/qr-vip-135k.png' },
+  group: { label: 'Vé Nhóm (3 người)', amount: 199000, text: 'Vé Nhóm — 199.000đ / 3 người', qr: 'assets/img/qr-nhom-199k.png' }
 };
 var selected = 'vip';
 
@@ -48,6 +48,8 @@ document.getElementById('reg-form').addEventListener('submit', function (e) {
   document.getElementById('order-ticket').textContent = t.label;
   document.getElementById('order-amount').textContent = fmt(t.amount);
   document.getElementById('order-content').textContent = code;
+  document.getElementById('qr-img').src = t.qr;
+  document.getElementById('qr-ticket').textContent = t.text;
 
   var msg = 'Chào anh Phong, em ' + name + ' đăng ký workshop Xây Đội Trợ Lý AI SubAgent.\n'
     + 'Mã đơn: ' + code + '\n'

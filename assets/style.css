@@ -259,11 +259,12 @@ section { padding: 72px 0; }
 .order-rows { font-size: 15px; margin: 12px 0; }
 .order-rows div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); }
 .order-rows div:last-child { border-bottom: none; }
-.qr-placeholder {
-  border: 2px dashed var(--border); border-radius: 16px; background: #fff;
-  padding: 36px 20px; text-align: center; color: var(--muted); font-size: 14px; margin: 16px 0;
+.qr-box {
+  border: 2px solid var(--border); border-radius: 16px; background: #fff;
+  padding: 20px; text-align: center; margin: 16px 0;
 }
-.qr-placeholder .qr-icon { font-size: 44px; margin-bottom: 8px; }
+.qr-box img { width: 240px; height: 240px; margin: 12px auto; }
+.qr-box .qr-note { font-size: 13px; color: var(--muted); margin: 8px 0 12px; }
 .copy-box { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 14px; white-space: pre-line; margin: 12px 0; }
 .btn-copy { background: #fff; border: 2px solid var(--border); border-radius: 999px; padding: 8px 18px; font-family: inherit; font-weight: 700; cursor: pointer; font-size: 14px; }
 .btn-copy:hover { border-color: var(--primary); }
