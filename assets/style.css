@@ -161,6 +161,10 @@ section { padding: 72px 0; }
 .project-meta { font-size: 13px; font-weight: 700; color: var(--accent); }
 .project-link { font-weight: 800; color: var(--accent); text-decoration: none; font-size: 15px; }
 .project-link:hover { text-decoration: underline; }
+.project-wide { grid-column: 1 / -1; }
+.project-shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 6px 0; }
+.project-shots img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; display: block; }
+@media (max-width: 720px) { .project-shots { grid-template-columns: 1fr; } }
 
 /* ---------- Audience ---------- */
 .audience { background: var(--cream-2); }
